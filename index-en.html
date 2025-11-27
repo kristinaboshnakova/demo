@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <title>Balmora Residence</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Ionicons (for the icon in the mobile menu) -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+  <!--Header-->
+  <header>
+    <a href="/" class="logo"><img src="image/logo-eng.png" style="height: 100px; width: 100px;" alt="Logo"></a>
+
+    <!-- hamburger / close -->
+    <a href="#" class="menu" aria-label="Toggle menu" role="button">
+      <i class="fas fa-bars open"></i>
+      <i class="fas fa-times close"></i>
+    </a>
+
+    <ul class="nav">
+      <li><a class="nav-btn" href="#home"><i class="fas fa-home"></i></a></li>
+      <li><a class="nav-btn" data-target="about" href="#about">About</a></li>
+      <li><a class="nav-btn" data-target="services" href="#services">Amenities</a></li>
+      <li><a class="nav-btn" data-target="portfolio" href="#gallery">Gallery</a></li>
+      <li><a class="nav-btn" data-target="activities" href="#activities">Activities</a></li>
+      <li><a class="nav-btn" data-target="portfolio" href="#portfolio">Prices</a></li>
+      <li><a class="nav-btn" data-target="contact" href="#contact">Contacts</a></li>
+
+      <li class="nav-item d-flex align-items-center ms-2">
+        <!-- EN version shows BG flag (click -> back to BG) -->
+        <button class="langSwitch btn">
+          <img class="flagIcon" src="https://flagcdn.com/24x18/bg.png" alt="BG">
+        </button>
+      </li>
+    </ul>
+
+    <!-- <div class="search">
+      <input type="text" placeholder="search" />
+      <i class="fas fa-search"></i>
+    </div>-->
+  </header>
+
+  <!-- Mobile Navigation -->
+  <ul class="nav-mobile">
+    <li>
+      <a class="nav-btn active" href="#" onclick="resetHeader();">
+        <ion-icon name="home-outline"></ion-icon>
+      </a>
+    </li>
+    <li><a class="nav-btn" href="#about" data-target="about">About</a></li>
+    <li><a class="nav-btn" href="#services" data-target="services">Amenities</a></li>
+    <li><a class="nav-btn" href="#gallery" data-target="portfolio">Gallery</a></li>
+    <li><a class="nav-btn" data-target="activities" href="#activities">Activities</a></li>
+    <li><a class="nav-btn" href="#portfolio" data-target="portfolio">Prices</a></li>
+    <li><a class="nav-btn" href="#contact"  data-target="contact">Contacts</a></li>
+    <li class="nav-item d-flex align-items-center ms-2">
+      <button class="langSwitch btn">
+        <img class="flagIcon" src="https://flagcdn.com/24x18/bg.png" alt="BG">
+      </button>
+    </li>
+  </ul>
+  <div class="banner container-fluid">
+    <div class="bg-slide slide-1 active">
+      <div class="content">
+        <h1>Residence Balmora</h1>
+        <p> A place of comfort, tranquillity, and an unforgettable stay in the heart of the Balkan Mountains.
+        </p>
+      </div>
+      <div class="circle bg">
+        <img src="image/villa.png" alt="">
+      </div>
+    </div>
+
+    <div class="bg-slide slide-2">
+      <div class="content">
+        <h1>Nature</h1>
+        <p>Fresh air and picturesque views at the foot of Mount Botev.</p>
+      </div>
+      <div class="circle bg">
+        <img src="image/villa2.png" alt="">
+      </div>
+    </div>
+
+    <div class="bg-slide slide-3">
+      <div class="content">
+        <h1>Leisure</h1>
+        <p>
+          A spacious garden, barbecue area, and cosy spots for pleasant moments.
+        </p>
+      </div>
+      <div class="circle bg">
+        <img src="image/view-from-garden.png" alt="">
+      </div>
+    </div>
+
+    <ul class="slide-loader">
+      <li><a class="slide-btn active" data-target="slide-1">1</a></li>
+      <li><a class="slide-btn" data-target="slide-2">2</a></li>
+      <li><a class="slide-btn" data-target="slide-3">3</a></li>
+    </ul>
+
+    <div class="share">
+      <p>Share</p>
+      <a href="https://www.facebook.com/"><i class="fas fa-share-alt"></i></a>
+    </div>
+
+    <div class="lead">
+      <svg viewBox="0 0 100 100" width="100" height="100">
+        <defs>
+          <path id="circle" d="M 50,50 m -37,0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" />
+        </defs>
+        <text font-size="17">
+          <textPath xlink:href="#circle">Be our guest!</textPath>
+        </text>
+      </svg>
+      <a href="#contact" class="move-down"><i class="fas fa-chevron-down"></i></a>
+    </div>
+
+    <button class="feat-prev">‹</button>
+    <button class="feat-next">›</button>
+
+  </div>
+
+  <section id="about" class="section">
+    <div class="container-narrow">
+      <h2 class="section-title">About Us</h2>
+
+      <div class="mini-feature-gallery">
+        <div class="mfg-wrapper">
+
+          <div class="mfg-slide active">
+            <img src="image/bethroom1.png" alt="">
+            <div class="mfg-caption">Cozy Bedroom</div>
+          </div>
+
+          <div class="mfg-slide">
+            <img src="image/kitchen.png" alt="">
+            <div class="mfg-caption">Spacious Kitchen</div>
+          </div>
+
+          <div class="mfg-slide">
+            <img src="image/view-from-garden.png" alt="">
+            <div class="mfg-caption">Large Veranda</div>
+          </div>
+
+          <div class="mfg-slide">
+            <img src="image/living-room2.png" alt="">
+            <div class="mfg-caption">Bright Living Room</div>
+          </div>
+
+          <div class="mfg-slide">
+            <img src="image/bbq.png" alt="">
+            <div class="mfg-caption">BBQ Area</div>
+          </div>
+
+        </div>
+
+        <button class="mfg-prev">‹</button>
+        <button class="mfg-next">›</button>
+      </div>
+
+      <p class="lead-text">
+        Welcome to Residence Balmora — a place designed for those who appreciate comfort, tranquillity, and a memorable experience in the heart of the Balkan Mountains. Ideal for families, private groups, corporate stays, and anyone seeking quality relaxation.
+      </p>
+
+      <div class="about-grid">
+
+        <div class="about-card">
+          <h3>Location</h3>
+          <p>
+            Situated in the “Panitsite” area, at the foot of Mount Botev.
+          </p>
+          <a href="location.html" class="card-cta">Discover more →</a>
+        </div>
+
+        <div class="about-card">
+          <h3>Comfort</h3>
+          <p>
+            Comfortable rooms, modern bathrooms, and welcoming common areas.
+          </p>
+          <a href="comfort.html" class="card-cta">Learn more →</a>
+        </div>
+
+        <div class="about-card">
+          <h3>Amenities</h3>
+          <p>
+            A spacious kitchen, large garden, barbecue area, and everything needed for a pleasant stay.
+          </p>
+          <a href="facilities.html" class="card-cta">View more →</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Services / Amenities ===== -->
+
+  <section id="services" class="section section-alt">
+    <div class="container-narrow">
+      <h2 class="section-title">Additional Services</h2>
+      <p class="lead-text">
+        Select a service for details.
+      </p>
+  
+      <ul class="amenities">
+  
+        <li class="amenity"
+            data-bs-toggle="modal" data-bs-target="#serviceModal"
+            data-title="Free High-Speed Wi-Fi"
+            data-desc="Internet over 100 Mbps in all rooms and the yard. Ideal for smart TV, remote work, and gaming."
+            data-img="image/wi-fi.jpg"
+            data-included="yes" data-price="">
+          <i class="fas fa-wifi"></i>
+          <span>Free Wi-Fi</span>
+          <button type="button" class="amenity-info" aria-label="more info"><i class="fas fa-info-circle"></i></button>
+        </li>
+  
+        <li class="amenity"
+            data-bs-toggle="modal" data-bs-target="#serviceModal"
+            data-title="Barbecue & Fireplace Area"
+            data-desc="Outdoor fireplace and barbecue, table for 10 people. Firewood/charcoal and utensils available upon request."
+            data-img="image/bbq.png"
+            data-included="yes" data-price="firewood upon request">
+          <i class="fas fa-fire"></i>
+          <span>Barbecue & Fireplace Area</span>
+          <button type="button" class="amenity-info" aria-label="more info"><i class="fas fa-info-circle"></i></button>
+        </li>
+  
+        <li class="amenity"
+            data-bs-toggle="modal" data-bs-target="#serviceModal"
+            data-title="Free Parking"
+            data-desc="Parking in the yard for up to 4 cars. Video surveillance included."
+            data-img="image/parking.jpg"
+            data-included="yes" data-price="">
+          <i class="fas fa-car"></i>
+          <span>Free Parking</span>
+          <button type="button" class="amenity-info" aria-label="more info"><i class="fas fa-info-circle"></i></button>
+        </li>
+  
+        <li class="amenity"
+            data-bs-toggle="modal" data-bs-target="#serviceModal"
+            data-title="Children’s Play Area & Lawn"
+            data-desc="Playground, sandbox, fenced green area. Suitable for young children."
+            data-img="image/view-from-garden.png"
+            data-included="yes" data-price="">
+          <i class="fas fa-baby"></i>
+          <span>Children’s Play Area & Lawn</span>
+          <button type="button" class="amenity-info" aria-label="more info"><i class="fas fa-info-circle"></i></button>
+        </li>
+  
+      </ul>
+    </div>
+  </section>
+  
+
+  <!-- === Gallery Section === -->
+  <section id="gallery" class="section section-alt">
+    <div class="container-narrow">
+
+      <h2 class="section-title">Gallery</h2>
+
+      <div id="galleryCarousel" class="carousel slide" data-bs-ride="carousel">
+
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="0" class="active"></button>
+          <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="1"></button>
+          <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="2"></button>
+          <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="3"></button>
+          <button type="button" data-bs-target="#galleryCarousel" data-bs-slide-to="4"></button>
+        </div>
+
+        <div class="carousel-inner rounded-4 shadow-lg">
+
+          <div class="carousel-item active">
+            <img src="image/kitchen.png" class="d-block w-100" alt="">
+          </div>
+
+          <div class="carousel-item">
+            <img src="image/bbq.png" class="d-block w-100" alt="">
+          </div>
+
+          <div class="carousel-item">
+            <img src="image/bethroom1.png" class="d-block w-100" alt="">
+          </div>
+
+          <div class="carousel-item">
+            <img src="image/toilet.png" class="d-block w-100" alt="">
+          </div>
+
+          <div class="carousel-item">
+            <img src="image/living-room.png" class="d-block w-100" alt="">
+          </div>
+
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#galleryCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+
+        <button class="carousel-control-next" type="button" data-bs-target="#galleryCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon"></span>
+        </button>
+
+      </div>
+
+    </div>
+
+    <a href="gallery.html" class="gallery-cta">View more photos →</a>
+
+  </section>
+
+  <section id="activities" class="section activities-section">
+    <div class="container-narrow">
+
+      <h2 class="section-title">Activities in the Area</h2>
+
+      <div class="activities-cards">
+
+        <div class="activity-card">
+          <div class="activity-img">
+            <img src="image/eco-paths.jpg" alt="Hiking Trails">
+          </div>
+          <div class="activity-content">
+            <h3>Hiking Trails</h3>
+            <p>Eco trails to Mount Botev, Byala Reka, Raisko Praskalo and many family-friendly routes.</p>
+          </div>
+        </div>
+
+        <div class="activity-card">
+          <div class="activity-img">
+            <img src="image/biking.jpg" alt="Cycling">
+          </div>
+          <div class="activity-content">
+            <h3>Cycling</h3>
+            <p>Diverse bike routes for mountain and leisure cycling. Bikes available for guests.</p>
+          </div>
+        </div>
+
+        <div class="activity-card">
+          <div class="activity-img">
+            <img src="image/nature-pats.jpg" alt="Nature and Picnics">
+          </div>
+          <div class="activity-content">
+            <h3>Walks & Picnics</h3>
+            <p>Fresh air, meadows, forests and peaceful natural spots for relaxation.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== Offers / Pricing ===== -->
+  <section id="portfolio" class="section">
+    <div class="container-narrow">
+      <h2 class="section-title">Offers & Prices</h2>
+
+      <div class="pricing-grid">
+        <div class="price-card">
+          <h3>Entire Residence - Weekdays</h3>
+          <p class="price">from <strong>600 BGN</strong> / night</p>
+          <ul>
+            <li>Capacity: 17 + 3 guests</li>
+            <li>All amenities included</li>
+            <li>7 rooms with double beds</li>
+            <li>1 room with three single beds</li>
+            <li><strong>Minimum stay: 2 nights on weekdays</strong></li>
+          </ul>
+          <a class="btn-primary" data-bs-toggle="modal" data-bs-target="#contactModal">Enquire</a>
+
+        </div>
+
+        <div class="price-card">
+          <h3>Weekend</h3>
+          <p class="price">from <strong>700 BGN</strong> / night </p>
+          <ul>
+            <li>Capacity: 17 + 3 guests</li>
+            <li>All amenities included</li>
+            <li>7 rooms with double beds</li>
+            <li>1 room with three single beds</li>
+            <li><strong>Minimum stay: 2 nights on weekends</strong></li>
+          </ul>
+          <a class="btn-primary" data-bs-toggle="modal" data-bs-target="#contactModal">Check Availability</a>
+
+        </div>
+
+        <div class="price-card">
+          <h3>One-Night Stay</h3>
+          <p class="price">from <strong>1000 BGN</strong> / night</p>
+          <ul>
+            <li>Capacity: 17 + 3 guests</li>
+            <li>All amenities included</li>
+            <li>7 rooms with double beds</li>
+            <li>1 room with three single beds</li>
+            <li> <strong>Price for 1 night</strong></li>
+          </ul>
+          <a class="btn-primary" data-bs-toggle="modal" data-bs-target="#contactModal">Request Offer</a>
+
+        </div>
+      </div>
+
+      <p class="note">
+        * Prices are indicative and may vary depending on season, holidays and availability.
+        Contact us for a personalised offer and current availability.
+      </p>
+    </div>
+  </section>
+
+  <!-- ===== Contact ===== -->
+  <section id="contact" class="section section-alt">
+    <div class="container-narrow">
+      <h2 class="section-title">Contact & Location</h2>
+
+      <div class="contact-grid">
+        <div class="contact-card">
+          <h3>Get in Touch</h3>
+          <p><i class="fas fa-phone"></i> <a href="tel:+359888123456">+359 888 123 456</a></p>
+          <p><i class="fas fa-envelope"></i> <a href="mailto:info@guesthouse.bg">info@guesthouse.bg</a></p>
+          <p><i class="fas fa-map-marker-alt"></i> Panitsite Area, Kalofer</p>
+
+          <form class="contact-form" onsubmit="event.preventDefault(); document.querySelector('#contact').scrollIntoView({behavior:'smooth'}); alert('Thank you! We will get back to you shortly.');">
+            <div class="form-row">
+              <input type="text" placeholder="Name" required>
+              <input type="tel" placeholder="Phone" required>
+            </div>
+            <input type="email" placeholder="Email" required>
+            <textarea rows="4" placeholder="Message / Dates / Number of Guests" required></textarea>
+            <button class="btn-primary" type="submit">Send Enquiry</button>
+          </form>
+        </div>
+
+        <div class="map-card">
+          <div class="map-embed">
+            <iframe
+            src="https://www.google.com/maps?q=42.655111,24.983528&z=15&output=embed"
+            allowfullscreen=""
+            loading="lazy">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Modal -->
+  <div class="modal fade" id="contactModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content" style="border-radius:16px;">
+        <div class="modal-header">
+          <h5 class="modal-title">Contact Us</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+
+        <div class="modal-body">
+          <form class="contact-form" onsubmit="event.preventDefault(); alert('Thank you! We will get back to you shortly.');">
+
+            <div class="form-row">
+              <input type="text" placeholder="Name" required>
+              <input type="tel" placeholder="Phone" required>
+            </div>
+
+            <input type="email" placeholder="Email" required>
+
+            <div class="form-row">
+              <label style="font-size:0.9em;">Check-in Date:</label>
+              <label style="font-size:0.9em;">Check-out Date:</label>
+            </div>
+            <div class="form-row">
+              <input type="date" required>
+              <input type="date" required>
+            </div>
+
+            <textarea rows="4" placeholder="Message / Number of Guests / Special Requirements" required></textarea>
+
+            <button class="btn-primary" type="submit">Send Enquiry</button>
+
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <a href="#" id="scrollTopBtn" class="scroll-top">
+    <i class="fas fa-chevron-up"></i>
+  </a>
+
+  <!-- Service Info Modal -->
+  <div class="modal fade" id="serviceModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content" style="border-radius:16px; overflow:hidden;">
+        <div class="modal-header">
+          <h5 class="modal-title" id="serviceModalTitle">Service</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <div class="modal-body">
+          <img id="serviceModalImg" src="img/guest-house.jpg" alt="Service Preview"
+               style="width:100%; height:200px; object-fit:cover; border-radius:10px; margin-bottom:14px;">
+
+          <div class="badges" id="serviceBadges">
+          </div>
+
+          <p id="serviceModalDesc" style="margin:0; font-size:1rem; line-height:1.6;">
+            Select a service to view details.
+          </p>
+        </div>
+
+        <div class="modal-footer" style="gap:8px;">
+          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" id="serviceToContactBtn">
+            Enquire
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <a href="tel:+359888123456" class="sticky-call">
+    <i class="fas fa-phone-alt"></i>
+</a>
+
+<footer class="site-footer">
+    <div class="footer-content">
+
+      <div class="footer-top">
+        <div class="footer-logo">
+          <img src="image/logo-eng.png" alt="Logo">
+        </div>
+
+        <div class="footer-message">
+          <p>
+            Welcome to Residence Balmora – a place where comfort, nature  
+            and tranquillity await you. Thank you for being our guest!
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-social">
+        <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="tel:+359888123456"><i class="fas fa-phone-alt"></i></a>
+        <a href="mailto:info@guesthouse.bg"><i class="fas fa-envelope"></i></a>
+      </div>
+
+      <p class="footer-copy">
+        © 2025 Residence Balmora — All rights reserved.
+      </p>
+
+    </div>
+</footer>
+
+
+<!-- Christmas Promo Popup -->
+<div id="christmasPopup" class="christmas-overlay">
+  <div class="christmas-popup">
+
+    <div class="lights-frame"></div>
+
+    <button class="popup-close" onclick="closeChristmasPopup()">×</button>
+
+    <img src="image/4.jpeg" class="popup-top-decor" alt="decor">
+
+    <h2>🎄 Christmas Promotion 🎁</h2>
+    <p>
+      Book your holiday stay and get a
+      <strong>10% discount</strong> for reservations made until December 31!
+    </p>
+
+    <a href="#contact" class="popup-btn" onclick="closeChristmasPopup()">View the offer</a>
+
+    <!-- MINI snow -->
+    <div class="snow-container"></div>
+
+  </div>
+</div>
+
+
+
+<script>
+  document.querySelectorAll('.amenity').forEach(item => {
+    item.addEventListener('click', () => {
+      document.getElementById('serviceModalTitle').textContent =
+        item.getAttribute('data-title');
+      document.getElementById('serviceModalDesc').textContent =
+        item.getAttribute('data-desc');
+    });
+  });
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

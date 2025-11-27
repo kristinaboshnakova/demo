@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <title>Project 1</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Ionicons (за иконата в mobile менюто) -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+  <!--Header-->
+  <header class="header-transparent">
+    <a href="/" class="logo"><img src="image/logo4.png" style="height: 100px; width: 100px;" alt=""></a>
+
+    <!-- hamburger / close -->
+    <a href="#" class="menu"    aria-label="Toggle menu" role="button">
+      <i class="fas fa-bars open"></i>
+      <i class="fas fa-times close"></i>
+    </a>
+
+    <ul class="nav">
+        <li><a class="nav-btn" href="index.html#home">Начало</a></li>
+        <li><a class="nav-btn" href="index.html#about">За нас</a></li>
+        <li><a class="nav-btn" href="index.html#services">Удобства</a></li>
+        <li><a class="nav-btn" href="index.html#gallery">Галерия</a></li>
+        <li><a class="nav-btn" href="index.html#activities">Активности</a></li>
+        <li><a class="nav-btn" href="index.html#portfolio">Цени</a></li>
+        <li><a class="nav-btn" href="index.html#contact">Контакти</a></li>
+        
+     <!-- <button class="langSwitch btn btn-outline-light d-flex align-items-center gap-2 px-3 py-1">
+        <img class="flagIcon" src="https://flagcdn.com/24x18/gb.png" alt="EN">
+       
+      </button>-->
+      
+      
+      
+    
+      
+    </ul>
+
+   <!-- <div class="search">
+      <input type="text" placeholder="search" />
+      <i class="fas fa-search"></i>
+    </div>-->
+  </header>
+
+  <!-- Mobile Navigation -->
+  <ul class="nav-mobile">
+    <li>
+      <a class="nav-btn active" href="#" onclick="resetHeader();">
+        <ion-icon name="home-outline"></ion-icon>
+      </a>
+    </li>
+    <li><a class="nav-btn" href="index.html#abou" data-target="about">За нас</a></li>
+    <li><a class="nav-btn" href="index.html#services" data-target="services">Удобства</a></li>
+    <li><a class="nav-btn" href="index.html#gallery" data-target="portfolio">Галерия</a></li>
+    <li><a class="nav-btn" data-target="activities" href="index.html#activities">Активности</a></li>
+    <li><a class="nav-btn" href="index.html#portfolio" data-target="portfolio">Цени</a></li>
+    <li><a class="nav-btn" href="index.html#contact"  data-target="contact">Контакти</a></li>
+    <!--<button class="langSwitch btn btn-outline-light d-flex align-items-center gap-2 px-3 py-1">
+      <img class="flagIcon" src="https://flagcdn.com/24x18/gb.png" alt="EN">
+    
+    </button>--> 
+  </ul>
+
+
+<!-- HERO SECTION -->
+<section class="location-hero">
+    <img src="image/view-from-garden.png" alt="Location">
+  
+    <div class="location-hero-text fade-in-up">
+      <h1 class="title-letters">Къде се намираме</h1>
+     
+    </div>
+  </section>
+  
+<!-- MAP SECTION -->
+<section class="location-map-section section">
+    <div class="container-narrow">
+  
+     
+  
+      <!-- Google Map -->
+      <div class="location-map-wrapper">
+        <iframe
+        src="https://www.google.com/maps?q=42.655111,24.983528&z=15&output=embed"
+        allowfullscreen=""
+        loading="lazy">
+      </iframe>
+      
+      </div>
+  
+      <!-- INFO BOX -->
+      <div class="location-info-box">
+  
+        <div class="info-item">
+          <i class="fas fa-map-marker-alt"></i>
+          <div>
+            <h3>Адрес</h3>
+            <p>м. Паниците, Калофер — Резиденция Балмора</p>
+          </div>
+        </div>
+  
+        <div class="info-item">
+          <i class="fas fa-car"></i>
+          <div>
+            <h3>Паркинг</h3>
+            <p>Безплатен частен паркинг за 4 автомобила</p>
+          </div>
+        </div>
+  
+        <div class="info-item">
+          <i class="fas fa-map"></i>
+          <div>
+            <h3>GPS Координати</h3>
+            <p>42.62000 N, 24.95000 E</p>
+          </div>
+        </div>
+  
+        <div class="info-item">
+          <i class="fas fa-location-arrow"></i>
+          <div>
+            <h3>Навигация</h3>
+            <p><a href="https://maps.google.com" target="_blank">Отвори в Google Maps →</a></p>
+          </div>
+        </div>
+  
+      </div>
+  
+    </div>
+  </section>
+  
+
+  <a href="#" id="scrollTopBtn" class="scroll-top">
+    <i class="fas fa-chevron-up"></i>
+</a>
+
+
+<footer class="site-footer">
+    <div class="footer-content">
+  
+      <div class="footer-top">
+        <div class="footer-logo">
+          <img src="image/logo4.png" alt="Лого">
+        </div>
+  
+        <div class="footer-message">
+          <p>
+            Добре дошли в Резиденция Балмора – място, където уютът, природата  
+            и спокойствието ви очакват. Благодарим, че сте наши гости!
+          </p>
+        </div>
+      </div>
+  
+      <div class="footer-social">
+        <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="tel:+359888123456"><i class="fas fa-phone-alt"></i></a>
+        <a href="mailto:info@guesthouse.bg"><i class="fas fa-envelope"></i></a>
+      </div>
+  
+      <p class="footer-copy">
+        © 2025 Резиденция Балмора — Всички права запазени.
+      </p>
+  
+    </div>
+  </footer>
+
+
+  <script>
+    document.querySelectorAll('.amenity').forEach(item => {
+      item.addEventListener('click', () => {
+        document.getElementById('serviceModalTitle').textContent =
+          item.getAttribute('data-title');
+        document.getElementById('serviceModalDesc').textContent =
+          item.getAttribute('data-desc');
+      });
+    });
+    </script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+<!-- for services-->
+
+    
+</body>
+</html>

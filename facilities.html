@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <title>Project 1</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Ionicons (за иконата в mobile менюто) -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</head>
+<body>
+  <!--Header-->
+  <header class="header-transparent">
+    <a href="/" class="logo"><img src="image/logo4.png" style="height: 100px; width: 100px;" alt=""></a>
+
+    <!-- hamburger / close -->
+    <a href="#" class="menu"    aria-label="Toggle menu" role="button">
+      <i class="fas fa-bars open"></i>
+      <i class="fas fa-times close"></i>
+    </a>
+
+    <ul class="nav">
+        <li><a class="nav-btn" href="index.html#home">Начало</a></li>
+        <li><a class="nav-btn" href="index.html#about">За нас</a></li>
+        <li><a class="nav-btn" href="index.html#services">Удобства</a></li>
+        <li><a class="nav-btn" href="index.html#gallery">Галерия</a></li>
+        <li><a class="nav-btn" href="index.html#activities">Активности</a></li>
+        <li><a class="nav-btn" href="index.html#portfolio">Цени</a></li>
+        <li><a class="nav-btn" href="index.html#contact">Контакти</a></li>    
+    </ul>
+  </header>
+
+  <!-- Mobile Navigation -->
+  <ul class="nav-mobile">
+    <li>
+      <a class="nav-btn active" href="#" onclick="resetHeader();">
+        <ion-icon name="home-outline"></ion-icon>
+      </a>
+    </li>
+    <li><a class="nav-btn" href="index.html#abou" data-target="about">За нас</a></li>
+    <li><a class="nav-btn" href="index.html#services" data-target="services">Удобства</a></li>
+    <li><a class="nav-btn" href="index.html#gallery" data-target="portfolio">Галерия</a></li>
+    <li><a class="nav-btn" data-target="activities" href="index.html#activities">Активности</a></li>
+    <li><a class="nav-btn" href="index.html#portfolio" data-target="portfolio">Цени</a></li>
+    <li><a class="nav-btn" href="index.html#contact"  data-target="contact">Контакти</a></li>
+  </ul>
+
+
+
+
+  
+  
+ <!-- HERO УДОБСТВА -->
+<section class="amenities-hero">
+    <div class="amenities-hero-bg">
+      <img src="image/living-room2.png" alt="Резиденция Балмора - Удобства">
+    </div>
+    <div class="amenities-hero-overlay"></div>
+    <div class="amenities-hero-content">
+      
+      <h1>Удобства</h1>
+     
+      <div class="amenities-tags">
+        <span>Луксозни бани</span>
+        <span>Напълно оборудвана кухня</span>
+        <span>Прекрасен двор</span>
+      </div>
+    </div>
+  </section>
+  
+  <!-- КРАТЪК ПРЕГЛЕД -->
+  <section class="container py-5 amenities-overview">
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="amenities-card">
+          <div class="icon-circle">
+            <i class="fas fa-shower"></i>
+          </div>
+          <h3>Баня</h3>
+          <p>Премиум текстил, луксозни принадлежности и безупречна чистота във всяка баня.</p>
+          <a href="#bathroom" class="amenity-link">Виж повече</a>
+        </div>
+      </div>
+  
+      <div class="col-md-4">
+        <div class="amenities-card">
+          <div class="icon-circle">
+            <i class="fas fa-utensils"></i>
+          </div>
+          <h3>Кухня</h3>
+          <p>Напълно оборудвана кухня с посуда, уреди и всичко необходимо за домашен уют.</p>
+          <a href="#kitchen" class="amenity-link">Виж повече</a>
+        </div>
+      </div>
+  
+      <div class="col-md-4">
+        <div class="amenities-card">
+          <div class="icon-circle">
+            <i class="fas fa-tree"></i>
+          </div>
+          <h3>Двор</h3>
+          <p>Озеленено външно пространство с барбекю зона и места за релакс.</p>
+          <a href="#garden" class="amenity-link">Виж повече</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- БАНЯ -->
+  <section id="bathroom" class="amenity-section section-dark py-5">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <div class="amenity-image">
+            <img src="image/toilet.png" alt="Луксозна баня">
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="amenity-content">
+            <span class="section-label">Баня</span>
+            <h2>Луксозни бани с усещане за SPA</h2>
+            <p>
+              Нашите бани са проектирани да осигуряват усещане за релакс и чистота, 
+              съчетавайки модерна визия и функционалност. Всяко помещение е оборудвано 
+              с висококачествени материали, LED осветление и подбрани детайли, които 
+              напомнят за бутикови SPA пространства.
+            </p>
+  
+            <div class="row mt-3">
+              <div class="col-sm-6">
+                <ul class="amenity-list">
+                  <li>Пухкави хотелски хавлии</li>
+                  <li>Кърпи за лице и постелки</li>
+                  <li>Луксозен шампоан и душ гел</li>
+                  <li>Комплект за лична грижа</li>
+                </ul>
+              </div>
+              <div class="col-sm-6">
+                <ul class="amenity-list">
+                  <li>Мощен сешоар</li>
+                  <li>Огледало с добро осветление</li>
+                  <li>24/7 топла вода</li>
+                  <li>Безупречна хигиена</li>
+                </ul>
+              </div>
+            </div>
+  
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- КУХНЯ -->
+  <section id="kitchen" class="amenity-section py-5">
+    <div class="container">
+      <div class="row align-items-center g-5 flex-lg-row-reverse">
+        <div class="col-lg-6">
+          <div class="amenity-image">
+            <img src="image/kitchen.png" alt="Напълно оборудвана кухня">
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="amenity-content">
+            <span class="section-label">Кухня</span>
+            <h2>Напълно оборудвана кухня за вашите моменти у дома</h2>
+            <p>
+              Кухнята в резиденцията е създадена за удобство както при кратък престой, 
+              така и при по-дълги ваканции. Комбинира модерни материали, функционални 
+              решения и пълно оборудване, за да се почувствате като у дома – но с атмосфера на висок клас.
+            </p>
+  
+            <div class="row mt-3">
+              <div class="col-sm-6">
+                <h6>Посуда & прибори</h6>
+                <ul class="amenity-list">
+                  <li>Чинии, купи и чаши</li>
+                  <li>Комплекти прибори</li>
+                  <li>Остри ножове и дъска за рязане</li>
+                  <li>Тигани, тенджери и тави</li>
+                </ul>
+              </div>
+              <div class="col-sm-6">
+                <h6>Електроуреди</h6>
+                <ul class="amenity-list">
+                  <li>Хладилник с фризер</li>
+                  <li>Кафе машина и електрическа кана</li>
+                  <li>Микровълнова и тостер</li>
+                  <li>Готварска печка с котлони</li>
+                </ul>
+              </div>
+            </div>
+  
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- ДВОР -->
+  <section id="garden" class="amenity-section section-soft py-5">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6">
+          <div class="amenity-image">
+            <img src="image/view-from-garden2.png" alt="Двор и външна зона">
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="amenity-content">
+            <span class="section-label">Двор & Външни зони</span>
+            <h2>Озеленен двор за пълен релакс</h2>
+            <p>
+              Външното пространство на резиденцията е създадено за спокойствие, 
+              уединение и пълна връзка с природата. Идеално за сутрешно кафе, 
+              следобеден релакс или вечеря под звездите.
+            </p>
+  
+            <div class="row mt-3">
+              <div class="col-sm-6">
+                <h6>Релакс зона</h6>
+                <ul class="amenity-list">
+                  <li>Озеленена и поддържана градина</li>
+                  <li>Градинска маса и столове</li>
+                  <li>Шезлонги / релакс столове</li>
+                  <li>Вечерно осветление</li>
+                </ul>
+              </div>
+              <div class="col-sm-6">
+                <h6>Барбекю & удобства</h6>
+                <ul class="amenity-list">
+                  <li>Барбекю зона</li>
+                  <li>Прибори за скара</li>
+                  <li>Места за събирания</li>
+                  <li>Паркоместа за гости</li>
+                </ul>
+              </div>
+            </div>
+  
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- ФИНАЛЕН CTA -->
+  <section class="amenities-cta text-center py-5">
+    <div class="container">
+      <h2>Готови ли сте за Вашия луксозен престой?</h2>
+      <p>
+        Резиденция Балмора Ви очаква с внимание към всеки детайл – 
+        от удобствата в банята до последното листо в градината.
+      </p>
+      <a href="index.html#contact" class="btn btn-success btn-lg mt-3">
+        Резервирайте сега
+      </a>
+    </div>
+  </section>
+  
+  
+
+  
+
+<footer class="site-footer">
+    <div class="footer-content">
+  
+      <div class="footer-top">
+        <div class="footer-logo">
+          <img src="image/logo4.png" alt="Лого">
+        </div>
+  
+        <div class="footer-message">
+          <p>
+            Добре дошли в Резиденция Балмора – място, където уютът, природата  
+            и спокойствието ви очакват. Благодарим, че сте наши гости!
+          </p>
+        </div>
+      </div>
+  
+      <div class="footer-social">
+        <a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="tel:+359888123456"><i class="fas fa-phone-alt"></i></a>
+        <a href="mailto:info@guesthouse.bg"><i class="fas fa-envelope"></i></a>
+      </div>
+  
+      <p class="footer-copy">
+        © 2025 Резиденция Балмора — Всички права запазени.
+      </p>
+  
+    </div>
+  </footer>
+
+
+  <script>
+    document.querySelectorAll('.amenity').forEach(item => {
+      item.addEventListener('click', () => {
+        document.getElementById('serviceModalTitle').textContent =
+          item.getAttribute('data-title');
+        document.getElementById('serviceModalDesc').textContent =
+          item.getAttribute('data-desc');
+      });
+    });
+    </script>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  <script src="script.js"></script>
+<!-- for services-->
+
+    
+</body>
+</html>
